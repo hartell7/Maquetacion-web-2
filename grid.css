@@ -15,12 +15,17 @@
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "HEADER    HEADER      HEADER"
+                        "content    content     sidebar"
+                        "widget1    widget2    sidebar"
+                        "footer1    footer1     footer1";
 }
 .contenedor > div,
 .contenedor .HEADER,
 .contenedor .siderbar,
 .contenedor .footer {
-    background: #fff;
+    background: rgb(189, 187, 187);
     padding: 20px;
     border-radius: 10;
     -webkit-border-radius: 10;
@@ -31,55 +36,86 @@
 .contenedor .HEADER {
     background: #12203E;
     color: #fff;
-    grid-column: 1 / 4;
-
+    grid-area: HEADER;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .contenedor .content {
-    grid-column: span 2;
+    background: white;
+    color: #000;
+    grid-area:content;
+    text-align: justify;
 }
 .contenedor .sidebar {
     background: rgb(27, 62, 18);
-    color: #fff;
+    color: #E9ECF4;
     text-align: center;
-    grid-column: 3 / 4;
+    grid-area: sidebar;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    grid-row: 2 / 4;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
-.contenedor .widget1,
-.contenedor .widget2 {
-    background: rgb(62, 18, 18);
-    color: #fff;
+.contenedor .widget1 {
+    background: rgb(7, 156, 57);
+    color: #000;
     height: 100px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-area: widget1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.contenedor .widget2 {
+    background: rgb(62, 18, 18);
+    color: #ffffff;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: widget2;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .contenedor .footer1 {
     background: #000;
     color: #fff;
     text-align: center;
-    grid-column: span 3;
     padding: 15px;
+    grid-area: footer1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 @media screen and (max-width: 600px) {
-    .contenedor .contenido {
-        grid-column: 1 / -1;
+    .contenedor {
+        grid-template-areas: "HEADER    HEADER      HEADER"
+                            "content    content     content"
+                            "sidebar    sidebar     sidebar"
+                            "widget1    widget1     widget1"
+                            "widget2    widget2     widget2"
+                            "footer1    footer1     footer1";
     }
-    .contenedor .contenido {
-        grid-column: 1 / -1;
-    }
-    .contenedor .widget1 {
-        grid-column: 1 / -1;
-    }
-    .contenedor .widget2 {
-        grid-column: span 2;
-    }
-    .contenedor .footer1 {
-        grid-column: span 3;
-    }
-
+}
+#content2 {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
