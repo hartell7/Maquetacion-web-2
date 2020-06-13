@@ -1,11 +1,10 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
 .body {
     background: #E9ECF4;
-    color: #000;
-    font-family: sans-serif;
+     font-family: sans-serif;
 }
 .contenedor {
     width: 100%;
@@ -46,7 +45,7 @@
 .contenedor .content {
     background: white;
     color: #000;
-    grid-area:content;
+    grid-area: content;
     text-align: justify;
 }
 .contenedor .sidebar {
@@ -113,7 +112,7 @@
                             "widget1    widget1     widget1"
                             "widget2    widget2     widget2"
                             "footer1    footer1     footer1";
-    }
+    } /*Responsive Design*/
 }
 #content2 {
     text-align: center;
